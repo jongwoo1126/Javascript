@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>P53</title>
+</head>
+<body>
+    <script>
+        let a = 10; 
+        let b = 20;
+        let m = 30;
+        let n = 40;
+
+        let result;
+        result = a > b || b >= m || m > n;
+        document.write(result,'<br/>')
+
+        result = a > b || b >= m || m <= n;
+        document.write(result,'<br/>')
+
+        result = a <= b && b >= m && m <= n;
+        document.write(result,'<br/>')
+
+        result = a <= b && b <= m && m <= n;
+        document.write(result,'<br/>')
+
+        result = !(a > b);
+        document.write(result,'<br/>')
+    </script>
+    
+</body>
+</html>
