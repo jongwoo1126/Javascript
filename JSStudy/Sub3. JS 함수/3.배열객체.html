@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.배열객체</title>
+</head>
+<body>
+    <h3>3.배열객체</h3>
+    <script>
+        // 배열객체
+        let dataset = ['고구마', '감자', '바나나'];
+        dataset.push('사과');
+        dataset.push('감');
+
+        document.write(dataset+"<br/>");
+        dataset.pop();
+        
+        document.write(dataset+"<br/>");
+
+        // 객체배열
+        let array = [{name:"고구마", price:"1000"},
+                     {name:"감자", price:"1500"},
+                     {name:"바나나", price:"2000"}];
+        
+        let popped = array.pop();
+        document.write(popped.name+"<br/>");
+
+        for(let obj of array){
+            document.write(obj.name+'<br/>')
+        }
+
+        // 자주 사용하는 배열함수
+        let numbers = [1, 2, 3, 4, 5, 6];
+
+        let joined1 = numbers.join('-');
+        let joined2 = numbers.join('');
+        
+        document.write('joined1 : '+joined1+'<br/>')
+        document.write('joined2 : '+joined2+'<br/>')
+
+        numbers.forEach(function(item, index){
+            document.write('index : '+index+', item : '+item+'<br>');
+        });
+
+        numbers.forEach((item, index)=>{
+            document.write('index : '+index+', item : '+item+'<br>');
+        });
+
+        let result1 = numbers.map((item)=>{
+            return item * item;
+        });
+
+        
+        let result2 = numbers.map((item)=>item+10);
+
+        document.write('result1 : '+result1+'<br/>');
+        document.write('result2 : '+result2+'<br/>');
+
+        let result3 = numbers.filter((data)=>{
+            return data % 2 == 0;
+        });
+        let result4 = numbers.filter((data)=>data%2==1);
+        
+        document.write('result3 : '+result3+'<br/>');
+        document.write('result4 : '+result4+'<br/>');
+    </script>
+</body>
+</html>
