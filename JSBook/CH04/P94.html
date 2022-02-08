@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>P94</title>
+</head>
+<body>
+    <script>
+        let today = new Date();
+        let nowYear = today.getFullYear();
+
+        let theDate = new Date(nowYear, 11, 31);
+        let diffDate = theDate.getTime()-today.getTime();
+
+        let result = Math.ceil(diffDate / (60 * 1000 * 60 * 24));
+        document.write("연말 D-day : " +result+ "일 남았습니다.");
+    </script>
+</body>
+</html>
