@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4.반복문</title>
+</head>
+<body>
+    <h3>4.반복문</h3>
+    <script>
+    // for
+    for(let i=1 ; i<=3 ; i++){
+        document.write('i : '+i+'<br/>');
+    }
+   
+    // 1부터 10까지 합
+    for (let k=1 ; k<=10; k++){
+        sum += k;
+    }
+    document.write('1부터 10까지 합 : '+sum+'<br/>');
+   
+    // 1부터 10까지 짝수합
+    let eSum = 0;
+
+    for (let j=1 ; j<=10; j++){
+        if(j&2 == 0){
+            esum += k;
+        }
+        
+    }
+    document.write('1부터 10까지 짝수합 : '+esum+'<br/>');
+    
+    // 별삼각형
+    for (let a=1 ; a<=10; a++){
+        for(let b=1 ; b<a ; b++){
+            document.write('*');
+        }
+        document.write('<br/>');
+    }
+
+    </script>
+    
+    <h4>while문</h4>
+    <script>
+    // while
+        let tot = 0;
+        let t = 1;
+
+        while(t <= 10){
+            tot += t;
+            t += 1;
+        }
+        document.write('while 1부터 10까지 합 : '+tot+'<br/>');
+
+    // 5와 7의 최소 공배수
+    let num = 1;
+    while(true){
+        if(num % 5 == 0 && num % 7 == 0){
+            break;
+        }
+        num += 1;
+    }
+    document.write('while 5와 7dml chlthrhdqotn : '+num+'<br/>');
+    </script>
+    
+    <h4>구구단표</h4>
+    <script>
+        // 구구단표
+        document.write("<table border = '1'>");
+        for(let a=1 ; a<=9 ; a++){
+            document.write("<tr>");
+            for(let b=2 ; b<=9 ; b++){
+                document.write("<td>"+b+' x '+a+' = '+ a*b +"</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+
+</body>
+</html>

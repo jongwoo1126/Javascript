@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.함수</title>
+    <script src="./lib/calc.js"></script>
+
+</head>
+<body>
+    <h3>1.함수</h3>
+    <script>
+        // 선언 함수
+        function f(x){
+            let y = x * 2 + 3;
+            return y;
+        }
+
+        let y1 = f(1);
+        let y2 = f(2);
+        let y3 = f(3);
+
+        document.write('y1 : '+y1+'<br/>');
+        document.write('y2 : '+y2+'<br/>');
+        document.write('y3 : '+y3+'<br/>');
+       
+        // 익명 함수 
+        let a = function(x, y){
+            let z = x + y;
+            return z;
+        }
+
+        let r1 = a(1, 2);
+        let r2 = a(2, 3);
+
+        document.write('r1 : '+r1+'<br/>');
+        document.write('r2 : '+r2+'<br/>');
+       
+        // 화살표 함수 
+        let b = (x, y) => {
+            let z = x + y;
+            return z;
+        }
+
+        let c = (x, y) => x + y;
+
+        let r3 = b(1,2);
+        let r4 = c(2,3);
+
+        document.write('r3 : '+r3+'<br/>');
+        document.write('r4 : '+r4+'<br/>');
+        
+        // 라이브러리 함수 
+        let rs1 = plus(1, 2);
+        let rs2 = minus(1, 2);
+        let rs3 = multi(2, 3);
+        let rs4 = div(4, 2);
+
+        document.write('rs1 : '+rs1+'<br/>');
+        document.write('rs2 : '+rs2+'<br/>');
+        document.write('rs3 : '+rs3+'<br/>');
+        document.write('rs4 : '+rs4+'<br/>');
+    </script>
+</body>
+</html>

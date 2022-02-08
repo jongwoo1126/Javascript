@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.내장함수</title>
+</head>
+<body>
+    <h3>2.내장함수</h3>
+    <script>
+        // 숫자 변환 함수
+        let str1 = '52';
+        let str2 = '52.131';
+
+        let rs1 = parseInt(str1);
+        let rs2 = parseFloat(str2);
+
+        document.write('rs1 : '+rs1+'<br/>');
+        document.write('rs2 : '+rs2+'<br/>');
+
+        // 문자 변화 함수
+        let num1 = 11;
+        let num2 = 22;
+
+        let rs3 = String(num1);
+        let rs4 = String(num2);
+
+        document.write('num1 : '+num1+'<br/>');
+        document.write('num2 : '+num2+'<br/>');
+
+        // 타이머 함수
+        setTimeout(function(){
+            document.write('3초후에 실행됨!<br/>')
+        }, 1000*3);
+
+        setInterval(function(){
+            document.write('3초 마다 실행됨!<br/>')
+        },1000*3);
+
+        // 기본 대화상자 함수
+        alert('자바스크립트 기본 대화상자');
+        let result = confirm('확인, 취소가 있는 대화상자');
+
+        if(result){
+            alert('확인을 눌렀습니다.');
+        }else{
+            alert('취소를 눌렀습니다.');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.내장객체</title>
+</head>
+<body>
+    <h3>3.내장객체</h3>
+    <script>
+        // 날짜 객체
+        let date = new Date();
+        let year = date.getFullYear();
+        let month = date.getMonth()+1;
+        let day = date.getDate();
+        
+        let hour = date.getHours();
+        let min = date.getMinutes();
+        let sec = date.getSeconds();
+
+        document.write(year+"년"+month+"월"+day+"일<br/>");
+        document.write(hour+"시"+min+"분"+sec+"초<br/>");
+
+        // 수학 객체
+        let r1 = Math.abs(-5);
+        let r2 = Math.sqrt(9);
+        let r3 = Math.ceil(1.1);
+        let r4 = Math.ceil(1.9);
+        let r5 = Math.floor(1.1);
+        let r6 = Math.floor(1.9);
+        let r7 = Math.round(1.1);
+        let r8 = Math.round(1.9);
+
+        document.write('r1 : '+r1+'<br/>');
+        document.write('r2 : '+r2+'<br/>');
+        document.write('r3 : '+r3+'<br/>');
+        document.write('r4 : '+r4+'<br/>');
+        document.write('r5 : '+r5+'<br/>');
+        document.write('r6 : '+r6+'<br/>');
+        document.write('r7 : '+r7+'<br/>');
+        document.write('r8 : '+r8+'<br/>');
+
+        let num1 = Math.random();
+        let num2 = num1 * 10;
+        let num3 = Math.ceil(num2);
+
+        document.write('num3 : '+num3+'<br/>');
+
+        let rand = Math.ceil(Math.random()*10);
+        document.write('rand : '+rand+'<br/>');
+        
+        // 문자열 객체
+        let str1 = new String('Hello Korea');
+        let str2 = 'Hello Korea';
+
+        let rs1 = str1.length;
+        let rs2 = str1.charAt(0);
+        let rs3 = str1.indexOf('e');
+        let rs4 = str2.lastIndexOf('e');
+        let rs5 = str2.replace('Korea', 'Busan');
+        let rs6 = str2.substring(1, 5);
+      
+        document.write('rs1 : '+rs1+'<br/>');
+        document.write('rs2 : '+rs2+'<br/>');
+        document.write('rs3 : '+rs3+'<br/>');
+        document.write('rs4 : '+rs4+'<br/>');
+        document.write('rs5 : '+rs5+'<br/>');
+        document.write('rs6 : '+rs6+'<br/>');
+        // 배열 객체
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.조건문</title>
+</head>
+<body>
+    <h3>3.조건문</h3>
+    <script>
+        // if
+        let num1 = 1;
+        let num2 = 2;
+        
+        if (num1 > 0){
+            document.write('num1은 0보다 크다.<br/>');
+        }
+
+        if (num1 > 0){
+            if(num2 > 1){
+                document.write('num1은 0보다 크고 num2는 1보다 크다.<br/>');
+            }
+        }
+
+        if(num1 > 0 && num2 > 1){
+            document.write('num1은 0보다 크고 num2는 1보다 크다.<br/>');
+        }
+
+        // if ~ else
+        let num3 = 3;
+        let num4 = 4;
+
+        if (num3 > num4){
+            document.write('num3은 num4보다 크다.<br/>');
+        } else{
+            document.write('num3은 num4보다 작다.<br/>');
+        }
+        
+        // if ~ else if ~ else
+        if (num1 > num2){
+            document.write('num1은 num2보다 크다.<br/>');
+        } else if(num2 > num3){
+            document.write('num2은 num3보다 크다.<br/>');
+        } else if(num3 > num4){
+            document.write('num3은 num4보다 크다.<br/>');
+        } else{
+            document.write('num4가 가장 크다.<br/>');
+        }
+        
+        // switch
+        let score = prompt('점수 입력');
+        alert('입력점수 : '+score);
+
+        let result = parseInt(score/10);
+        
+        switch(result){
+            case 10:
+            case 9 :
+                document.write('A 입니다.');
+                break;
+            case 8 :
+                document.write('B 입니다.');
+                break;
+            case 7 :
+                document.write('C 입니다.');
+                break;
+            case 6 :
+                document.write('D 입니다.');
+                break;
+            default:
+                document.write('F 입니다.');
+                break;
+            }
+    </script>
+</body>
+</html>
