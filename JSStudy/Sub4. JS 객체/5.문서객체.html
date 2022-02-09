@@ -9,10 +9,42 @@
         내용 : 자바스크립트 객체 실습하기
         
         문서객체
-         -
+         - 문서객체란 브라우저 화면에 출력된 HTML문서를 의미하는 객체
+         - 문서객체 documet를 직접적으로 사용해서 문서조작을 수행
+         - 하지만 직접적으로 documet 객체로 문서조작을 하지 않고 jQuery로 수행
     -->
+    <script>
+        console.log('1');
+
+        // 브라우저(window)가 html 페이지를 출력을 끝내고 실행
+        window.onload = function(){
+            console.log('2');
+
+            document.querySelector('h1').style.color = 'red';
+            document.querySelector('h2').style.background = 'orange';
+
+           let txt = document.getElementById('txt')
+           txt.style.color = 'blue';
+        }
+
+        console.log('3');
+    </script>
 </head>
 <body>
-    
+    <h3>5.문서객체 실습</h3>
+
+    <h1>h1 제목입니다.</h1>
+    <h2>h2 제목입니다.</h2>
+
+    <p id="txt">
+        p 태그입니다.
+    </p>
+
+    <p>
+        p 태그입니다.
+    </p>
 </body>
 </html>
+<script>
+    console.log('4');
+</script>

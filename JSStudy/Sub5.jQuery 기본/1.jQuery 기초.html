@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.jQuery 기초</title>
+    <!-- jQuery 라이브러리 추가 -->
+    <script src="./lib/jquery-3.6.0.min.js"></script>
+    <script>
+        // 자바스크립트 코드
+        window.onload = function(){
+            let city = document.getElementById('city');
+            let li = city.getElementsByTagName('li');
+            li[1].style.color = 'blue';
+        };
+
+        // 제이쿼리 코드
+        $(document).ready(function(){
+            $('#city > li:nth-child(4)').css('color','green');
+        });
+    </script>
+</head>
+<body>
+    <h3>1.jQuery 기초</h3>
+
+    <ul id="city">
+        <li>서울</li>
+        <li>대전</li>
+        <li>대구</li>
+        <li>부산</li>
+        <li>광주</li>
+    </ul>
+</body>
+</html>
