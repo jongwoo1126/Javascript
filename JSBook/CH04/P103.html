@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>P103</title>
+</head>
+<body>
+    <script>
+        let greenArr = ["교대", "방배", "강남"];
+        let yelloArr = ["미금", "정자", "수서"];
+
+        greenArr.splice(2, 1, "서초", "역삼");
+        console.log(greenArr);
+
+        let data1 = yelloArr.pop();
+        let data2 = yelloArr.shift();
+
+        yelloArr.push(data2);
+        console.log(yelloArr);
+        
+        yelloArr.unshift(data1);
+        console.log(yelloArr);
+
+        
+    </script>
+</body>
+</html>
