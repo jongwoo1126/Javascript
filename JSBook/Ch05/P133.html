@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>P133</title>
+</head>
+<body>
+    <script>
+        let count = 0;
+
+        myFnc();
+
+        function myFnc(){
+            count++;
+            document.write("hello"+count,"<br>");
+        }
+
+        myFnc();
+
+        let theFnc = function(){
+            count++;
+            document.write("bye"+count,"<br>");
+        }
+
+        theFnc();
+    </script>
+</body>
+</html>

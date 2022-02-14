@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>P120</title>
+    <script>
+        let addNum = 0;
+        let subNum = 1000;
+
+        let auto_1 =setInterval(function(){
+            addNum++;
+            console.log("addNum : "+addNum);
+        },3000);
+
+        let auto_2 =setInterval(function(){
+            subNum--;
+            console.log("subNum : "+subNum);
+        },3000);
+    </script>
+</head>
+<body>
+    <h3>일정 시간 간격으로 값 증감시키기</h3>
+    <button onclick="clearInterval(auto_1)">증가 정지</button>
+    <button onclick="clearInterval(auto_2)">감소 정지</button>
+</body>
+</html>
