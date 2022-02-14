@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.jQuery 이벤트</title>
+    <!--
+        날짜 : 2022/02/14
+        이름 : 박종우
+        내용 : jQuery 이벤트 실습하기
+
+        이벤트(Event)
+         - 사용자의 특정행동이 반응하는 함수를 정의하는것
+         - 클릭, 더블클릭, 스크롤 이동 등이 이에 해당
+    -->
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    function action(){
+        alert('버튼1 클릭!');
+    }
+   
+    $(function(){
+        $('#btn2').click(function(){
+            alert('버튼2 클릭!');
+        });
+    });
+
+    $('#btn3').on('click', function(){
+        alert('버튼3 클릭!');
+    })
+
+</script>
+<body>
+    <h3>1.jQuery 이벤트</h3>
+
+    <button id="btn1" onclick="action()">버튼1</button>
+    <button id="btn2">버튼2</button>
+    <button id="btn3">버튼3</button>
+
+</body>
+</html>

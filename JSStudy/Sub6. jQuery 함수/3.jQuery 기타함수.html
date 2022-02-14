@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.jQuery 기타함수</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            
+            // css 함수
+            $('.box1').css('width','100px').css('height','100px').css('border','1px solid black');
+            $('.box2').css({'width':'100px',
+                            'height':'100px',
+                            'border':'1px solid blue'});
+        
+            // text(), html() - 문서객체의 내용을 조작하는 함수
+            let txtResult = $('#korea').text();
+            let htmlResult = $('#korea').html();
+
+            console.log('txtResult : '+txtResult);
+            console.log('htmlResult : '+htmlResult);
+
+            $('p:eq(0)').text('<em>text() 함수로 내용입력</em>');
+            $('p:eq(1)').html('<em>html() 함수로 내용입력</em>');
+
+            let divs = $('section > div');
+
+            divs.eq(0).html($('#korea').html());
+            divs.eq(1).html($('#korea').text());
+            divs.eq(2).text($('#korea').html());
+            divs.eq(3).text($('#korea').text());
+
+            // 문서객체 추가, 이동함수
+            let city = $('article > ul')
+            
+            city.append('<li><i>제주도</i></li>')
+            city.prepend('<li><i>서울특별시</i></li>')
+            
+            city.find('ol > li').eq(0).next().appendTo('.city > li:eq(1) > ol');
+            city.find('ol > li:eq(2)').prependTo('.city > li:eq(5) > ol');
+            city.find('ol > li:eq(2)').prependTo('.city > li:eq(2) > ol');
+            city.find('ol > li:eq(3)').prependTo('.city > li:eq(3) > ol');
+            city.find('ol > li:eq(4)').appendTo('.city > li:eq(1) > ol');
+            
+        });
+    </script>
+</head>
+<body>
+    <h3>3.jQuery 기타함수</h3>
+
+    <h4>css함수</h4>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+
+    <h4>text, html 함수</h4>
+    <ul id ="korea">
+        <li>서울</li>
+        <li>대전</li>
+        <li>대구</li>
+        <li>부산</li>
+        <li>광주</li>
+    </ul>
+
+    <p></p>
+    <p></p>
+
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <h4>문서객체 추가, 이동함수</h4>
+    <article>
+        <ul class="city">
+            <li><i>경기도</i><ol></ol></li>
+            <li><i>충청도</i><ol></ol></li>
+            <li><i>강원도</i><ol></ol></li>
+            <li>
+                <i>경상도</i>
+                <ol>
+                    <li>창원</li>
+                    <li>수원</li>
+                    <li>목포</li>
+                    <li>부여</li>
+                    <li>원주</li>
+                    <li>파주</li>
+                </ol>
+            </li>
+            <li><i>전라도</i><ol></ol></li>
+        </ul>
+    </article>
+</body>
+</html>

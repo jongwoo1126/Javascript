@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.jQuery 이벤트 종류</title>
+    <style>
+        .box{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            
+            $('.box1').click(function(){
+                $(this).css('background','red');
+            });
+
+            $('.box2').mousedown(function(){
+                $(this).css('background','green');
+            });
+
+            $('.box3').mouseup(function(){
+                $(this).css('background','blue');
+            });
+            
+            $('.box4').mouseover(function(){
+                $(this).css('background','orange');
+            });
+
+            $('.box5').mouseout(function(){
+                $(this).css('background','yellow');
+            });
+
+            $('.box6').hover(function(){
+                // mouseover
+                $(this).css('background','red');
+            }, function(){
+                // mouseout
+                $(this).css('background','green');
+            });
+
+            $('.box7').mousemove(function(e){
+                console.log('x : '+e.offsetX+', y : '+e.offsetY);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>2.jQuery 이벤트 종류</h3>
+
+    <div class="box box1">click</div>
+    <div class="box box2">mousedown</div>
+    <div class="box box3">mouseup</div>
+    <div class="box box4">mouseover</div>
+    <div class="box box5">mouseout</div>
+    <div class="box box6">hover</div>
+    <div class="box box7">mousemove</div>
+</body>
+</html>
