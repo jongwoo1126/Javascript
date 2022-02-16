@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6.기타 통신 함수</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+            $('button:eq(0)').click(function(){
+                // ajax get 함수
+                $.get('http://chhak.or.kr/data/user.json', function (data){
+
+                    $('p:eq(0) > span:eq(0)').text(data.uid);
+                    $('p:eq(0) > span:eq(1)').text(data.name);
+                    $('p:eq(0) > span:eq(2)').text(data.hp);
+                    $('p:eq(0) > span:eq(3)').text(data.age);
+                })
+            });
+
+            $('button:eq(1)').click(function(){
+                // ajax post 함수
+                let jsonData = {
+                    "uid": "abcd",
+                    "pass": "1234"
+                }
+                $.post('http://chhak.or.kr/data/user.json', jsonData, function (data){
+                    $('p:eq(1) > span:eq(0)').text(data.uid);
+                    $('p:eq(1) > span:eq(1)').text(data.name);
+                    $('p:eq(1) > span:eq(2)').text(data.hp);
+                    $('p:eq(1) > span:eq(3)').text(data.age);
+                })
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>6.기타 통신 함수</h3>
+
+    <button>get() 요청</button>
+    <p>
+        아이디 : <span></span><br>
+        이름 : <span></span><br>
+        휴대폰 : <span></span><br>
+        나이 : <span></span><br>
+    </p>
+
+    <button>post() 요청</button>
+    <p>
+        아이디 : <span></span><br>
+        이름 : <span></span><br>
+        휴대폰 : <span></span><br>
+        나이 : <span></span><br>
+    </p>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.Json데이터 요청처리</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            $('button').click(function(){
+                $.ajax({
+                    url: 'http://chhak.or.kr/data/users.json',
+                    type: 'get',
+                    dataType: 'json',
+                    success: function(data){
+                        
+                        for(let user of data.users){
+                            
+                            $('table').append('<tr></tr>');
+                            $('table tr:last-child').append('<td>'+user.uid+'</td>');
+                            $('table tr:last-child').append('<td>'+user.name+'</td>');
+                            $('table tr:last-child').append('<td>'+user.hp+'</td>');
+                            $('table tr:last-child').append('<td>'+user.age+'</td>');
+
+                        }
+                    }
+                })
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>2.Json데이터 요청처리</h3>
+    <button>데이터 요청하기</button>
+    <table border="1">
+        <tr>
+            <th>아이디</th>
+            <th>이름</th>
+            <th>휴대폰</th>
+            <th>나이</th>
+        </tr>
+    </table>
+</body>
+</html>

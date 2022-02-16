@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.Json 데이터 요청</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        /*
+            날짜 : 2022/02/16
+            이름 : 박종우
+            내용 : jQuery Ajax 통신 실습하기
+
+            AJAX(Asynchronous Json and Xml)
+
+             - Json 또는 Xml 형태의 데이터를 비동기식으로 정송하기 위한 통신기술
+             - 서버로 부터는 데이터만 요청하고 페이지 처리는 클라이언트에서 수행
+        */
+        $(function(){
+            $('button').click(function(){
+
+                // 데이터 요청하기(Ajax 통신)
+                $.ajax({
+                    url: 'http://chhak.or.kr/data/user.json',   // 데이터 요청서버 주소
+                    type: 'get',                                // 데이터 요청 방식(GET/POST)
+                    dataType: 'json',                           // 서버로부터 전달받는 데이터의 형식
+                    success: function(data){                    // 서버로부터 데이터를 전달받기 위한 핸들러
+                        // 요청한 데이터를 수신 핸들러
+                        $('p > span:eq(0)').text(data.uid);
+                        $('p > span:eq(1)').text(data.name);
+                        $('p > span:eq(2)').text(data.hp);
+                        $('p > span:eq(3)').text(data.age);
+
+                    }
+                });
+            })
+        }); 
+    </script>
+</head>
+<body>
+    <h3>1.Json 데이터 요청</h3>
+
+    <button>데이터 요청1</button>
+    <p>
+        아이디 : <span></span><br>
+        이름 : <span></span><br>
+        휴대폰 : <span></span><br>
+        나이 : <span></span><br>
+    </p>
+</body>
+</html>
