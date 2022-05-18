@@ -9,12 +9,11 @@
     <script>
         // 배열객체
         let dataset = ['고구마', '감자', '바나나'];
-        dataset.push('사과');
+        dataset.push('사과'); // 데이터 추가
         dataset.push('감');
-
         document.write(dataset+"<br/>");
-        dataset.pop();
-        
+
+        dataset.pop(); // 마지막 데이터 삭제
         document.write(dataset+"<br/>");
 
         // 객체배열
@@ -23,10 +22,10 @@
                      {name:"바나나", price:"2000"}];
         
         let popped = array.pop();
-        document.write(popped.name+"<br/>");
+        document.write(popped.name+"<br/>"); // pop된 name
 
         for(let obj of array){
-            document.write(obj.name+'<br/>')
+            document.write(obj.name+'<br/>')  // array의 name 값 출력(바나나는 pop)
         }
 
         // 자주 사용하는 배열함수
