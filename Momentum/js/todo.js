@@ -12,14 +12,17 @@ function saveToDos() {
 
 function deleteToDo(event) {
     const li = event.target.parentElement;      //버튼의 클릭 이벤트를 통해 삭제할 버튼 찾기
-    li.remove();
+    li.remove();    //li 삭제. localstorage에 남아있음.
+    toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));      //id가 같으면 filter됨. toDos에서 제거. localstorage에서도 삭제됨.
+    saveToDos();
 }
 
 function paintToDo(newToDo) {
     const li = document.createElement("li");
-    
+    li.id = newToDo.id;
+
     const span = document.createElement("span");
-    span.innerText = newToDo;
+    span.innerText = newToDo.text;
     
     const button = document.createElement("button");
     button.innerText = "❌";
@@ -35,8 +38,12 @@ function handlToDoSubmit(event){
     event.preventDefault();
     const newToDo = toDoInput.value;
     toDoInput.value = "";
-    toDos.push(newToDo);        //배열 toDos에 newToDo값 삽입
-    paintToDo(newToDo);
+    const newToDoObj ={
+        text: newToDo,
+        id: Date.now()
+    }
+    toDos.push(newToDoObj);        //배열 toDos에 newToDo값 삽입
+    paintToDo(newToDoObj);
     saveToDos();
 }
 

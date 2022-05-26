@@ -7,3 +7,5 @@ const bgImage = document.createElement("img");      // <img/> 생성
 bgImage.src = `img/${chosenImage}`;         // <img src="img/{chosenImage}.jpg">
 
 document.body.appendChild(bgImage);         // body에 bgImage 삽입
+
+bgImage.id = 'bgImage';
