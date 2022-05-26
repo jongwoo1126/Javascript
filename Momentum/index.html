@@ -12,6 +12,15 @@
     </form>
     <h2 id="clock">00:00:00</h2>
     <h1 id="greeting" class="hidden"></h1>
+    <form id="todo-form">
+        <input type="text" placeholder="write a To Do and Press Enter" required/>
+        <ul id="todo-list">
+            <li hidden>
+                <span></span>
+                <button hidden></button>
+            </li>
+        </ul>
+    </form>
     <div id="quote">
         <span>quote</span>
         <span>author</span>
@@ -20,6 +29,7 @@
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
 </body>
 
 </html>
