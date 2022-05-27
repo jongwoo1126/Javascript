@@ -1,8 +1,14 @@
+/*Javascript에서 className 부여로 요소를 숨기기 위함*/
 .hidden{
     display: none;
 }
+
 *{
     box-sizing: border-box;
+}
+
+body{
+    padding-top: 150px;
 }
 
 #bgImage {
@@ -10,37 +16,85 @@
     left: 0;
     top: 0;
     z-index:-5;
+    max-height: 1400px;
+    
 }
 
 #login-form {
     text-align: center;
     color: white;
     margin: 0 auto;
-
 }
 
-#login-form:first-child {
+#login-form > input:first-child {
+    text-align: center;
+    color: white;
+    background-color: transparent;
+    border: 0;
+}
+
+#login-form > input:last-child {}
+
+#clock {
+    text-align: center;
+    margin: 10px;
+    color: white;
+    font-size: 200px;
+}
+
+#greeting {
     text-align: center;
     color: white;
 }
 
-#clock {
-    
-}
-
-#greeting {
-
-}
-
 #todo-form {
-
+    text-align: center;
 }
 
-#todo-form:first-child {}
+#todo-form > input{
+    width: 500px;
+    height: 76px;
+    font-size: 36px;
+    background-color: transparent;
+    border: 0;
+}
+
+#todo-form > input:hover{
+    background-color: rgba(255,255,255,0.4);
+    border: 0;
+}
+
+#todo-form:first-child {
+    text-align: center;
+}
 
 #todo-list {
-
+    text-align: center;
+    color: white;
 }
 
-#quote{}
-#weather{}
+#todo-list > li{
+    list-style: none;       /* list-style 앞 기호 제거*/
+    text-align: center;
+    color: white;
+    font-size: 28px;
+}
+
+#todo-list > li > button{
+    border: 0;
+    background-color:rgba(255,255,255,0);
+    font-size: 19px;
+}
+
+#quote{
+    text-align: center;
+    color: white;
+}
+#weather{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 20px;
+    padding-right: 20px;
+    color: white;
+}
